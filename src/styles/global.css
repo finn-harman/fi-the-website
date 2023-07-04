@@ -27,3 +27,10 @@ h2 {
 img {
   max-width: 100%;
 }
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+}

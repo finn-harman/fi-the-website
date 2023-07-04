@@ -1,10 +1,11 @@
 ---
 import Navigation from "../components/Navigation.astro";
+import { getBaseUrl } from "../helpers/filePathHelpers";
 
 const {title} = Astro.props;
 ---
 <div class="row">
-    <a href="/fi-the-website/" class="title"><h1>{title}</h1></a>
+    <a href=`${getBaseUrl()}/` class="title"><h1>{title}</h1></a>
     <Navigation />
 </div>
 

@@ -1,5 +1,5 @@
 ---
-const allPosts = await Astro.glob('../pages/posts/**/*.mdx');
+const allPosts = await Astro.glob('../pages/posts/**/*.md');
 const MostRecentPost = allPosts.reduce((prev, curr) => Date.parse(prev.frontmatter.pubDate) > Date.parse(curr.frontmatter.pubDate) ? prev : curr);
 ---
 

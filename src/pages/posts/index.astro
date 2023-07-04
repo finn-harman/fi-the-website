@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import {formatDate} from "../../helpers/dateHelpers";
 
-const allPosts = await Astro.glob('../../pages/posts/**/*.mdx');
+const allPosts = await Astro.glob('../../pages/posts/**/*.md');
 const sortedDescendingAllPosts = allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 ---
 
