@@ -1,0 +1,22 @@
+---
+import Navigation from "../components/Navigation.astro";
+
+const {title} = Astro.props;
+---
+<div class="row">
+    <a href="/" class="title"><h1>{title}</h1></a>
+    <Navigation />
+</div>
+
+<style>
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* flex-direction: "row"; */
+    }
+    .title {
+        color: inherit;
+        text-decoration: none;
+    }
+</style>

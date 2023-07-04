@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('../../pages/posts/*.md');
+const sortedDescendingAllPosts = allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+---
+
+<BaseLayout>
+    {sortedDescendingAllPosts.map((post) => <li><a href={post.url}>{`${post.frontmatter.pubDate}: ${post.frontmatter.title}`}</a></li>)}
+</BaseLayout>
