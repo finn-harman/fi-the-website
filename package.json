@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.6.5"
+    "@astrojs/mdx": "^0.19.7",
+    "astro": "^2.6.5",
+    "integration": "^0.3.1"
   }
 }
